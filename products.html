@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+
+    <title>Products</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+    </style>
+    <script>
+        function funcOrder() {
+            alert("We are working on your orders. Please be patient with us.");
+        }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <script type="text/javascript">
+        
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        // Using google scripts
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Task', 'S'],
+                ['USA', 8],
+                ['India', 2],
+                ['Germany', 4],
+                ['China', 2],
+                ['Others', 8]
+            ]);
+
+            // setting size of pie chart
+            var options = { 'title': 'Sales in different contries', 'width': 550, 'height': 400 };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+                <body>
+                    <div>
+                        <!-- <div class="nav">
+                            <h1 style="position: absolute;  left: 30%; top: 5%; font-family: 'Gotham'; font-size: 30.9576px;  /* or 40px */ letter-spacing: 0.1em; ">We Are Beauties</h1>
+                        </div>
+                        <div class="navlinks">
+                            <a href="#">Who are we</a>
+                            <a href="#">Products</a>
+                            <a href="#">Partners</a>
+                        </div>
+                   -->
+                        <div class="mainbody" style="background-image: url('Seconderypagebanner.png')">
+                            <h1 style="position: absolute;  left: 30%; top: 5%; font-family: 'Gotham'; font-size: 30.9576px;  /* or 40px */ letter-spacing: 0.1em; ">We Are Beauties</h1>
+                            <a href="index.html" class="navtext">Who are we</a>
+                            <a href="products.html" class="navtext" style="left:1010px">Products</a>
+                            <a href="team.html" class="navtext" style="left:1100px">Partners</a>
+                        </div>
+                        <div class="maintext">
+                            <p style="font-family: 'Futura'; font-style: normal; font-weight: 700; font-size: 70px; line-height: 93px; text-align: center;">
+                                Each formula was developed to meet the specific needs of each individual.
+                            </p>
+
+                        </div>
+                        <div class="text1">
+                            <p>With 400+ products across the world, we're on a mission to reveal natural beauty.</p>
+                        </div>
+                        <div class="tablediv">
+                            <h1 style="align-content:center">Our Product Details</h1>
+                            <table>
+                                <tr>
+                                    <th class="th" style="width:10%">Product Name</th>
+                                    <th class="th" style="width:10%">Country Origin</th>
+                                    <th class="th" style="width:10%">Avalible</th>
+                                    <th class="th" style="width:10%">Delivery</th>
+                                    <th class="th" style="width:10%">Varients</th>
+                                    <th class="th" style="width:40%">Description</th>
+                                    <th class="th" style="width:10%"></th>
+                                </tr>
+                                <tr>
+                                    <td class="td">WeBeauty Face</td>
+                                    <td class="td">USA</td>
+                                    <td class="td">250 Packs</td>
+                                    <td class="td">1 Week</td>
+                                    <td class="td">12</td>
+                                    <td class="td"> Our finest ingredients sourced from the best of nature, we aim to nourish and restore the natural beauty in each individual to help become their own best version.</td>
+                                    <td>
+                                        <button id="btnOrder" class="button" onclick="funcOrder()">
+                                            Check Out
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">DaNi</td>
+                                    <td class="td">India</td>
+                                    <td class="td">556 Packs</td>
+                                    <td class="td">2 Week</td>
+                                    <td class="td">7</td>
+                                    <td class="td"> Monitors social and personal identities for identity theft.</td>
+                                    <td>
+                                        <button id="btnOrder" class="button" onclick="funcOrder()">
+                                            Check Out
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">WeBeauty Face</td>
+                                    <td class="td">China</td>
+                                    <td class="td">256 Packs</td>
+                                    <td class="td">5 Days</td>
+                                    <td class="td">12</td>
+                                    <td class="td"> Our finest ingredients sourced from the best of nature, we aim to nourish and restore the natural beauty in each individual to help become their own best version.</td>
+                                    <td>
+                                        <button id="btnOrder" class="button" onclick="funcOrder()">
+                                            Check Out
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="td">DaNi</td>
+                                    <td class="td">Germany</td>
+                                    <td class="td">687 Packs</td>
+                                    <td class="td">2 Week</td>
+                                    <td class="td">7</td>
+                                    <td class="td"> Monitors social and personal identities for identity theft.</td>
+                                    <td>
+                                        <button class="button" id="btnOrder" onclick="funcOrder()">
+                                            Check Out
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="datamodel" >
+                            <h1 style="align-content:center">Data Model</h1>
+                            <div class="datamodel1" style="background-image:url('DataModel.png')">
+
+                            </div>
+                        </div>
+                        <div class="visu">
+                            <h1 style="align-content:center">Data Visualization</h1>
+                            <div class="datamodel2" id="piechart">
+
+                            </div>
+                        </div>
+                    </div>
+                    <footer>
+                        <p>Developed by us@WeAreBeautiesUSF</p>
+                    </footer>
+                </body>
+</html >
